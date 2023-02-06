@@ -1,0 +1,27 @@
+---
+interface Props {
+    img: string;
+    title: string;
+    author: string;
+    col: any;
+    item: number;
+}
+const { img, title, author, col, item } = Astro.props;
+---
+
+<article
+    style={`background-image: url("${img}")`}
+    class={`w-100
+    h-[350px]
+    bg-cover
+    bg-center
+    text-white
+    ${col[item]}`}
+>
+    <div id="hover" class="grid h-full bg-zinc-700/50">
+        <div class="h-full flex flex-col justify-end p-6">
+            <p class="text-xs">{author}</p>
+            <h3 class="font-bold">{title}</h3>
+        </div>
+    </div>
+</article>

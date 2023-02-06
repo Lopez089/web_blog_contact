@@ -1,0 +1,17 @@
+---
+import H1 from "../components/h1.astro";
+import P from "../components/p.astro";
+const dataHero = {
+    Headers: "Blog Desing and Programing",
+    copy: "orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s",
+};
+---
+
+<section
+    class="col-span-12 flex flex-col justify-center items-center text-center gap-4"
+>
+    <H1>{dataHero.Headers}</H1>
+    <div class="max-w-2xl grid grid-start-2 grid-end-10">
+        <P>{dataHero.copy}</P>
+    </div>
+</section>

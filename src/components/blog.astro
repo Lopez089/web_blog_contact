@@ -1,0 +1,135 @@
+---
+import Article from "./article.astro";
+const articles = [
+    {
+        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        title: "Desing and Programing",
+        author: "Pepe Dominguez",
+    },
+    {
+        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        title: "Desing and Programing",
+        author: "Pepe Dominguez",
+    },
+    {
+        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        title: "Desing and Programing",
+        author: "Pepe Dominguez",
+    },
+    {
+        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        title: "Desing and Programing",
+        author: "Pepe Dominguez",
+    },
+    {
+        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        title: "Desing and Programing",
+        author: "Pepe Dominguez",
+    },
+    {
+        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        title: "Desing and Programing",
+        author: "Pepe Dominguez",
+    },
+    {
+        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        title: "Desing and Programing",
+        author: "Pepe Dominguez",
+    },
+    {
+        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        title: "Desing and Programing",
+        author: "Pepe Dominguez",
+    },
+    {
+        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        title: "Desing and Programing",
+        author: "Pepe Dominguez",
+    },
+    {
+        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        title: "Desing and Programing",
+        author: "Pepe Dominguez",
+    },
+];
+
+const column =
+    articles.length === 1
+        ? ["col-span-12"]
+        : articles.length === 2
+        ? ["col-span-8", "col-span-4"]
+        : articles.length === 3
+        ? ["col-span-4", "col-span-4", "col-span-4"]
+        : articles.length === 4
+        ? ["col-span-8", "col-span-4", "col-span-4", "col-span-8"]
+        : articles.length === 5
+        ? ["col-span-4", "col-span-8", "col-span-4", "col-span-4", "col-span-4"]
+        : articles.length === 6
+        ? [
+              "col-span-8",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-12",
+          ]
+        : articles.length === 7
+        ? [
+              "col-span-8",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-8",
+          ]
+        : articles.length === 8
+        ? [
+              "col-span-8",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-8",
+              "col-span-12",
+          ]
+        : articles.length === 9
+        ? [
+              "col-span-8",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-8",
+              "col-span-8",
+              "col-span-4",
+          ]
+        : articles.length === 10 && [
+              "col-span-8",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-8",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+          ];
+---
+
+<section class="grid gap-4 grid-cols-12 gap-4 col-span-12">
+    {
+        articles.map((article, item) => (
+            <Article
+                title={article.title}
+                author={article.author}
+                img={article.img}
+                col={column}
+                item={item}
+            />
+        ))
+    }
+</section>

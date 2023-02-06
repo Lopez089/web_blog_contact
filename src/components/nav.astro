@@ -1,0 +1,25 @@
+---
+const nav = [
+    {
+        name: "Home",
+        path: "#",
+    },
+    {
+        name: "Contact",
+        path: "/contact",
+    },
+];
+---
+
+<nav class="grid col-span-12">
+    <p>Logo</p>
+    <ul class="flex col-start-8 col-end-12 justify-end gap-4">
+        {
+            nav.map((item) => (
+                <li>
+                    <a href={item.path}>{item.name}</a>
+                </li>
+            ))
+        }
+    </ul>
+</nav>

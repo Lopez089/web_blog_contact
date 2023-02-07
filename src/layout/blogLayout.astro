@@ -1,11 +1,11 @@
 ---
 import Container from "../components/container.astro";
 import Nav from "../components/nav.astro";
-const { title, description } = Astro.props;
+const { title, description, frontmatter} = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,7 +21,7 @@ const { title, description } = Astro.props;
                 <div class="grid col-span-6 fixid">
                     <img
                         class="h-full"
-                        src="https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                        src={frontmatter.image}
                         alt="img"
                     />
                 </div>
@@ -29,6 +29,10 @@ const { title, description } = Astro.props;
                     id="article"
                     class="grid col-span-6 p-16 overflow-scroll flex gap-8"
                 >
+                <div class="grid gap-2">
+                    <h1>{frontmatter.title}</h1>
+                    <p class="text-sm">{frontmatter.excerpt}</p>
+                </div>
                     <slot />
                 </div>
             </section>

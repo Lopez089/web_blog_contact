@@ -1,57 +1,7 @@
 ---
 import Article from "./article.astro";
-const articles = [
-    {
-        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        title: "Desing and Programing",
-        author: "Pepe Dominguez",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        title: "Desing and Programing",
-        author: "Pepe Dominguez",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        title: "Desing and Programing",
-        author: "Pepe Dominguez",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        title: "Desing and Programing",
-        author: "Pepe Dominguez",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        title: "Desing and Programing",
-        author: "Pepe Dominguez",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        title: "Desing and Programing",
-        author: "Pepe Dominguez",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        title: "Desing and Programing",
-        author: "Pepe Dominguez",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        title: "Desing and Programing",
-        author: "Pepe Dominguez",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        title: "Desing and Programing",
-        author: "Pepe Dominguez",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        title: "Desing and Programing",
-        author: "Pepe Dominguez",
-    },
-];
+
+const articles = await Astro.glob("../pages/blog/*.md");
 
 const column =
     articles.length === 1
@@ -124,9 +74,10 @@ const column =
     {
         articles.map((article, item) => (
             <Article
-                title={article.title}
-                author={article.author}
-                img={article.img}
+                url={article.url}
+                title={article.frontmatter.title}
+                author={article.frontmatter.author}
+                img={article.frontmatter.image}
                 col={column}
                 item={item}
             />

@@ -1,12 +1,13 @@
 ---
 interface Props {
+    url: string;
     img: string;
     title: string;
     author: string;
     col: any;
     item: number;
 }
-const { img, title, author, col, item } = Astro.props;
+const { img, title, author, col, item, url } = Astro.props;
 ---
 
 <article
@@ -19,9 +20,9 @@ const { img, title, author, col, item } = Astro.props;
     ${col[item]}`}
 >
     <div id="hover" class="grid h-full bg-zinc-700/50">
-        <div class="h-full flex flex-col justify-end p-6">
+        <a href={url} class="h-full flex flex-col justify-end p-6">
             <p class="text-xs">{author}</p>
             <h3 class="font-bold">{title}</h3>
-        </div>
+        </a>
     </div>
 </article>

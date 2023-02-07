@@ -1,12 +1,9 @@
 ---
-title: " Introduction to the Essential Data Structures & Algorithms"
-excerpt: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
-publishDate: "2022-11-09T16:39:36.050Z"
-image: "https://images.unsplash.com/photo-1627163439134-7a8c47e08208?&fit=crop&w=430&h=240"
-category: "Courses"
+title: "Typography Example Post"
+excerpt: "Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat"
+image: "https://images.unsplash.com/photo-1675453987062-ba156180d5a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfGFldTZyTC1qNmV3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
 author: "Marcell Ziemann"
 layout: "../../layout/blogLayout.astro"
-tags: [webdev, tailwindcss, frontend]
 ---
 
 # Lorem ipsum dolor sit amet

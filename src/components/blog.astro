@@ -56,7 +56,8 @@ const column =
               "col-span-8",
               "col-span-4",
           ]
-        : articles.length === 10 && [
+        : articles.length === 10
+        ? [
               "col-span-8",
               "col-span-4",
               "col-span-4",
@@ -67,6 +68,19 @@ const column =
               "col-span-4",
               "col-span-4",
               "col-span-4",
+          ]
+        : articles.length === 11 && [
+              "col-span-8",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-8",
+              "col-span-4",
+              "col-span-4",
+              "col-span-4",
+              "col-span-12",
           ];
 ---
 

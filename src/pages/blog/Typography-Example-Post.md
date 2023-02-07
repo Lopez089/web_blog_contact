@@ -1,8 +1,9 @@
 ---
 title: "Typography Example Post"
+id: 1
 excerpt: "Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat"
 image: "https://images.unsplash.com/photo-1675453987062-ba156180d5a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfGFldTZyTC1qNmV3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
-author: "Marcell Ziemann"
+author: "Juan López"
 layout: "../../layout/blogLayout.astro"
 ---
 

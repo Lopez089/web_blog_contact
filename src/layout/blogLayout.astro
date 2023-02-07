@@ -1,0 +1,121 @@
+---
+import Container from "../components/container.astro";
+import Nav from "../components/nav.astro";
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+    </head>
+
+    <body>
+        <Container>
+            <Nav />
+            <section class="grid col-span-12 grid-cols-12">
+                <div class="grid col-span-6 fixid">
+                    <img
+                        class="h-full"
+                        src="https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                        alt="img"
+                    />
+                </div>
+                <div
+                    id="article"
+                    class="grid col-span-6 p-16 overflow-scroll flex gap-8"
+                >
+                    <slot />
+                </div>
+            </section>
+        </Container>
+    </body>
+</html>
+
+<style is:inline>
+    * {
+        color: rgb(105, 105, 105);
+    }
+
+    #article::-webkit-scrollbar {
+        width: 0.2em;
+        background-color: #ffffff;
+    }
+
+    #article::-webkit-scrollbar-thumb {
+        background-color: #ffffff;
+    }
+
+    #article::-webkit-scrollbar-thumb:hover {
+        background-color: #ffffff;
+    }
+    h1 {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    h3 {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    blockquote {
+        padding-left: 0.8rem;
+        border-left: 2px solid;
+        font-style: italic;
+    }
+
+    blockquote > p {
+        font-weight: 600;
+        color: rgb(0, 0, 0);
+    }
+
+    ul {
+        list-style: disc;
+        padding-left: 0.8rem;
+    }
+    ol {
+        list-style: decimal;
+    }
+
+    table {
+        overflow-y: scroll;
+    }
+    th {
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+    tr {
+        border-bottom: 1px solid;
+    }
+    td {
+        min-width: 100px;
+    }
+
+    code {
+        font-family: monospace;
+        padding: 0.2rem;
+        color: #f25274;
+        background-color: #2b2b3f;
+    }
+
+    pre{
+            overflow-x:hidden;
+    height: max-content;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+    }
+</style>

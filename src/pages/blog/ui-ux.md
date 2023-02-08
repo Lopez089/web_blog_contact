@@ -3,7 +3,7 @@ title: "Cómo mejorar la usabilidad y la experiencia del usuario en su sitio web
 id: 6
 excerpt: "Mejorar la usabilidad y la experiencia del usuario es clave para el éxito de cualquier sitio web. Aquí hay algunos consejos para lograrlo: simplifica la navegación, utiliza una tipografía legible, asegúrate de que el contenido sea accesible en todas las plataformas, optimiza la velocidad de carga, proporciona retroalimentación clara y brinda opciones de contacto fáciles. Al implementar estos consejos, aumentarás la satisfacción del usuario y la probabilidad de que regresen a tu sitio web."
 image: "https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
-author: "Juan López"
+author: "Juan López "
 layout: "../../layout/blogLayout.astro"
 ---
 

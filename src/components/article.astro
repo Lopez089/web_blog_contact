@@ -12,12 +12,15 @@ const { img, title, author, col, item, url } = Astro.props;
 
 <article
     style={`background-image: url("${img}")`}
-    class={`w-100
-    h-[350px]
-    bg-cover
-    bg-center
-    text-white
-    ${col[item]}`}
+    class={`
+        w-100
+        h-[350px]
+        bg-cover
+        bg-center
+        text-white
+        ${col[item]}
+        sm: col-span-12
+    `}
 >
     <div id="hover" class="grid h-full bg-zinc-700/50">
         <a href={url} class="h-full flex flex-col justify-end p-6">

@@ -5,33 +5,39 @@ const articles = await Astro.glob("../pages/blog/*.md");
 
 const column =
     articles.length === 1
-        ? ["col-span-12"]
+        ? ["lg:col-span-12"]
         : articles.length === 2
-        ? ["col-span-8", "col-span-4"]
+        ? ["lg:col-span-8", "lg:col-span-4"]
         : articles.length === 3
-        ? ["col-span-4", "col-span-4", "col-span-4"]
+        ? ["lg:col-span-4", "lg:col-span-4", "lg:col-span-4"]
         : articles.length === 4
-        ? ["col-span-8", "col-span-4", "col-span-4", "col-span-8"]
+        ? ["lg:col-span-8", "lg:col-span-4", "lg:col-span-4", "lg:col-span-8"]
         : articles.length === 5
-        ? ["col-span-4", "col-span-8", "col-span-4", "col-span-4", "col-span-4"]
+        ? [
+              "lg:col-span-4",
+              "lg:col-span-8",
+              "lg:col-span-4",
+              "lg:col-span-4",
+              "lg:col-span-4",
+          ]
         : articles.length === 6
         ? [
-              "col-span-8",
-              "col-span-4",
-              "col-span-4",
-              "col-span-4",
-              "col-span-4",
-              "col-span-12",
+              "lg:col-span-8",
+              "lg:col-span-4",
+              "lg:col-span-4",
+              "lg:col-span-4",
+              "lg:col-span-4",
+              "lg:col-span-12",
           ]
         : articles.length === 7
         ? [
-              "col-span-8",
-              "col-span-4",
-              "col-span-4",
-              "col-span-4",
-              "col-span-4",
-              "col-span-4",
-              "col-span-8",
+              "lg:col-span-8",
+              "lg:col-span-4",
+              "lg:col-span-4",
+              "lg:col-span-4",
+              "lg:col-span-4",
+              "lg:col-span-4",
+              "lg:col-span-8",
           ]
         : articles.length === 8
         ? [
@@ -70,21 +76,21 @@ const column =
               "col-span-4",
           ]
         : articles.length === 11 && [
-              "col-span-8",
-              "col-span-4",
-              "col-span-4",
-              "col-span-4",
-              "col-span-4",
-              "col-span-4",
-              "col-span-8",
-              "col-span-4",
-              "col-span-4",
-              "col-span-4",
-              "col-span-12",
+              "lg:col-span-8",
+              "lg:col-span-4",
+              "lg:col-span-4",
+              "lg:col-span-4",
+              "lg:col-span-4",
+              "lg:col-span-4",
+              "lg:col-span-8",
+              "lg:col-span-4",
+              "lg:col-span-4",
+              "lg:col-span-4",
+              "lg:col-span-12",
           ];
 ---
 
-<section class="grid gap-4 grid-cols-12 gap-4 col-span-12">
+<section class="grid grid-cols-12 gap-4 col-span-12">
     {
         articles.map((article, item) => (
             <Article

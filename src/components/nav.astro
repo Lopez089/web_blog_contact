@@ -11,15 +11,17 @@ const nav = [
 ];
 ---
 
-<nav class="grid col-span-12 row-start-1 row-end-2 items-center">
-    <a href="/web_blog_contact/"
-        ><p>Pixel<span class="text-gray-900 font-bold">Perfect</span></p></a
+<nav class="grid col-span-12 items-center">
+    <a href="/web_blog_contact/" class="grid col-start-1 col-end-3">
+        <p>Pixel<span class="text-gray-900 font-bold">Perfect</span></p></a
     >
-    <ul class="flex col-start-8 col-end-12 justify-end gap-4">
+    <ul class="flex col-start-11 col-end-12 justify-between">
         {
             nav.map((item) => (
                 <li>
-                    <a href={item.path}>{item.name}</a>
+                    <a class="hover:text-gray-900 " href={item.path}>
+                        {item.name}
+                    </a>
                 </li>
             ))
         }
